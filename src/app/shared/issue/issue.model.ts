@@ -1,12 +1,12 @@
 export enum IssueStatus {
   BOOKMARKED = 'bookmarked',
   DELAYED = 'delayed',
-  COMPLETED = 'completed'
+  COMPLETED = 'completed',
 }
 
 export enum IssuePriority {
   HIGH = 'high',
-  LOW = 'low'
+  LOW = 'low',
 }
 
 export interface Issue {

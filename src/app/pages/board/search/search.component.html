@@ -3,7 +3,8 @@
     style="position:absolute;margin-top: 2px;" [icon]="faSearch"></fa-icon>
   <input class="rounded-sm  pl-4" id="typeahead-spec" name="specialization"
     placeholder="" type="text" autocomplete="off"
-    style="width: 150px;border: 1px solid grey;">
+    style="width: 150px;border: 1px solid grey;" [(ngModel)]="searchInput"
+    [ngbTypeahead]="search">
 </div>
 
 <!-- (keypress)="setText($event)" [(ngModel)]="searchText" -->

@@ -12,14 +12,19 @@
   </button>
 </div>
 <div class="d-flex flex-row ml-4 ">
-  <app-search class="mr-2"></app-search>
+  <app-search (titleEmitter)="filterTitle($event)" [clearSearch]="clearSearch"
+    class="mr-2"></app-search>
   <app-profile class="mr-3" [imageList]="projectMemberUrls"></app-profile>
   <button type="button" class="btn btn-sm btn-light mr-3 fs-12">
     <span>Only my issues</span>
   </button>
   <button type="button" class="btn btn-sm  btn-light  fs-12"
-    (click)="onIgnoreResolved()">
+    (click)="filter($event)">
     <span>Ignore Resolved</span>
+  </button>
+  <button type="button" class="btn btn-sm  btn-light  fs-12"
+    *ngIf="showClearButton" (click)="clearAll()">
+    <span>Clear All</span>
   </button>
 
 </div>
