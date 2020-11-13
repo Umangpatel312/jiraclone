@@ -1,0 +1,15 @@
+<div class="card mb-1">
+  <div class="card-body p-1 ">
+    <p class="card-title fs-12 ">{{issue.title}}
+    </p>
+  </div>
+  <div class="card-footer d-flex p-1 bg-white border-0 ">
+    <app-profile [isLarge]="false" [imageList]="issue.memberList"></app-profile>
+    <span
+      class="fs-10 text-muted pl-1 pt-2 mr-auto ">{{issue.taskTypeAndId}}</span>
+    <fa-icon [icon]="getIssueStatus()" class="fa-sm mr-1 text-success bg-white">
+    </fa-icon>
+    <fa-icon [icon]="getIssuePriority()" class="fa-sm text-warning">
+    </fa-icon>
+  </div>
+</div>

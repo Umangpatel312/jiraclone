@@ -1,0 +1,35 @@
+<div class="d-flex mt-2">
+  <app-title class="mr-auto ml-4"></app-title>
+  <button type="button" class="btn btn-sm btn-light mr-1 fs-12">
+    <fa-icon [icon]="faTwitter" class="fa-md text-primary mr-2">
+    </fa-icon>
+    <span>Tweet</span>
+  </button>
+  <button type="button" class="btn btn-sm  btn-light mr-3 fs-12">
+    <fa-icon [icon]="faGithub" class="fa-md text-primary mr-2">
+    </fa-icon>
+    <span>Github Repo</span>
+  </button>
+</div>
+<div class="d-flex flex-row ml-4 ">
+  <app-search class="mr-2"></app-search>
+  <app-profile class="mr-3" [imageList]="projectMemberUrls"></app-profile>
+  <button type="button" class="btn btn-sm btn-light mr-3 fs-12">
+    <span>Only my issues</span>
+  </button>
+  <button type="button" class="btn btn-sm  btn-light  fs-12"
+    (click)="onIgnoreResolved()">
+    <span>Ignore Resolved</span>
+  </button>
+
+</div>
+
+<div class="row m-0 ml-4 mt-3 mr-3 h-75">
+  <div class="col  border mr-2 bg-light p-2"
+    *ngFor="let section of filteredSections">
+    <app-issue-list [title]="section.title" [issues]="section.issues">
+    </app-issue-list>
+  </div>
+</div>
+
+<!-- <app-issue></app-issue> -->
